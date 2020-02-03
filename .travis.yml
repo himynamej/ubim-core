@@ -1,13 +1,15 @@
 sudo : required
-language: go
+
 services:
   -docker
 
 
 before_install:
   - docker build -t javadah/core-api .
+  
+script:
+  -docker run javadah/core-api go version
+  
+after_success:
   - echo "$docker_pass" | docker login -u "$docker_id" --password-stdin
   - docker push javadah/core-api
-
-
-  
