@@ -1,0 +1,42 @@
+{
+  "$id": "https://example.com/person.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Person",
+  "type": "object",
+  "properties": {
+    "model": {
+      "type": "string"
+    },
+    "yearMade": {
+      "type": "string"
+    },
+    "endate": {
+      "type": "string"
+    },
+    "discount": {
+      "type": "string"
+    },
+    "driverDiscount": {
+      "type": "string"
+    },
+    "usage": {
+      "type": "string"
+    },
+    "preInsuranceDuration": {
+      "type": "string"
+    },
+    "damageRecived": {
+      "type": "string"
+    },
+    "damage": {
+      "type": "string"
+    },
+    "driverDamage": {
+      "type": "string"
+    },
+    "preInsurance": {
+      "type": "string"
+    }
+
+  }
+}

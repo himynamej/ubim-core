@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "io.grpc.examples.helloworld";
+option java_outer_classname = "HelloWorldProto";
+
+package fileserv;
+
+service Service {
+    rpc Download(FileRequest) returns (stream Chunk) {}
+    rpc Upload(stream Chunk) returns (UploadStatus) {}
+}
+
+
+message UploadStatus {
+    string Message = 1;
+    string file_id = 2;
+}
+
+// The request message containing the user's name.
+message Chunk {
+    bytes Content = 1;
+    string bucket=2;
+    string file_name=3;
+    string token=4;
+
+}
+
+message FileRequest {
+    string file_id = 1;
+    string token=2;
+}
