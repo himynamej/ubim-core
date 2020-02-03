@@ -8,7 +8,7 @@ before_install:
   - docker build -t javadah/core-api .
   
 script:
-  -docker run javadah/core-api go version
+  - docker run javadah/core-api go version
   
 after_success:
   - echo "$docker_pass" | docker login -u "$docker_id" --password-stdin
