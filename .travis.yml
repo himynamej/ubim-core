@@ -5,7 +5,7 @@ services:
 
 before_install:
   - docker build -t javadah/core-api .
-  - echo "&docker_pass" | docker login -u "$docker_id" --password-stdin
+  - echo "$docker_pass" | docker login -u "$docker_id" --password-stdin
   - docker push javadah/core-api
 
 
